@@ -1,0 +1,48 @@
+.shadow {
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 14px;
+}
+
+main {
+  height: 20000px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+header h1 img {
+  height: 21px;
+}
+header nav {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+header nav ul {
+  height: 60px;
+  align-items: center;
+}
+header nav ul li {
+  height: 21px;
+  margin-right: 40px;
+}
+header section div {
+  margin-right: 20px;
+}
+header section .download + div img {
+  width: 18px;
+}/*# sourceMappingURL=header.css.map */
