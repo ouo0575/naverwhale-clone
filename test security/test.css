@@ -1,0 +1,119 @@
+.safe_b{
+    background: linear-gradient(312.53deg, rgb(110, 63, 228) -2.32%, rgb(124, 116, 250) 102.75%);
+}
+.malware_b{
+    background: linear-gradient(135deg, rgb(112, 132, 249) 0%, rgb(40, 84, 243) 100%);
+}
+.clean_w{
+    background: linear-gradient(135deg, rgb(85, 200, 158) 0%, rgb(36, 162, 155) 100%);
+}
+.my_a{
+    background: linear-gradient(104.78deg, rgb(255, 172, 0) 0%, rgb(249, 149, 0) 100%);
+}
+.tab_main{
+    width: 100%;
+    border-radius: 20px;
+}
+.tab_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+/* body{
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6
+} */
+.container{
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(129, 100, 231, 0.1), rgba(129, 100, 231, 0.1)), rgb(255, 255, 255);
+}  
+ul.tabs{
+    flex: 1 1 0px;
+    max-width: 498px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+ul.tabs li{
+    position: relative;
+    overflow-x: clip;
+    color: #000;
+    display: block;
+}
+ul.tabs li.current{
+    color: #fff;
+}
+.tab-content{
+    position:relative;
+    top: -10px;
+    display: none;
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: opacity 0.5s;
+}
+.tab-content.current{
+    opacity: 1;
+    display: block;}
+    /* visibility: visible; */
+
+.dot{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.dot li{
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%; 
+    margin-bottom: 2px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+        }
+.tab_main{
+    position: relative;
+    padding: 30px 20px 30px 24px;
+    
+}
+.tab_main h4{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+.tab_main h4+p{
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+    margin: 6px 0px 24px;
+    padding-right: 22px;
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+.add{
+    display: inline-block;
+    height: 38px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    font-family: Arial, "맑은 고딕", "Malgun Gothic", "SF Pro Display", "Apple SD Gothic Neo", Roboto, "Noto Sans KR", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0px;
+    padding: 0px 16px;
+}

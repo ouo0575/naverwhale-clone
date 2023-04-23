@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            function slider(){
+            var tab_id = $('li.current').attr('data-tab');
+            var n_tab_id = parseInt(tab_id) + 1 ;
+            if (n_tab_id == 5){
+            n_tab_id = 1;
+            }
+            $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+            $("ul").find("[data-tab='" + n_tab_id + "']").addClass('current');
+                $("#"+n_tab_id).addClass('current');
+        }
+        var myTimer = setInterval(slider, 1000);
+            $('ul.tabs li').click(function(){
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#"+tab_id).addClass('current');
+            })
+        $('.container').mouseover(function(){
+            clearInterval(myTimer);
+        })
+            $('.container').mouseout(function(){
+            myTimer = setInterval(slider, 3000);
+        })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="tab_box">
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="1">
+                <div class="tab_main safe_b">
+                    <div>
+                        <h4>세이프 브라우징</h4>
+                        <p>헷갈리는 위조 사이트로 인한 걱정은 이제 그만, 네이버 웨일이 미리 판단하여 알려줍니다.</p>
+                        <p><a href="#" class="add">자세히보기</a></p>
+                    </div>
+                    <ul class="dot">
+                        <li style="background-color: rgba(255, 255, 255, 1);"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="tab_rest">
+                    <p>세이프브라우징</p>
+                </div>
+            </li>
+            <li class="tab-link" data-tab="2">
+                <div class="tab_main malware_b">
+                    <div>
+                        <h4>악성 프로그램 차단</h4>
+                        <p>헷갈리는 위조 사이트로 인한 걱정은 이제 그만, 네이버 웨일이 미리 판단하여 알려줍니다.</p>
+                        <p><a href="#" class="add">자세히보기</a></p>
+                    </div>
+                    <ul class="dot">
+                        <li></li>
+                        <li style="background-color: rgba(255, 255, 255, 1);"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="tab_rest safe_b">
+                    <p>악성 프로그램 차단</p>
+                </div>
+            </li>
+            <li class="tab-link" data-tab="3">
+                <div class="tab_main clean_w">
+                    <div>
+                        <h4>클린 웹</h4>
+                        <p>사용자를 불편하게 하거나 혼란스럽게 하는 광고를 차단하고 쾌적한 웹 환경을 제공합니다.</p>
+                        <p><a href="#" class="add">자세히보기</a></p>
+                    </div>
+                    <ul class="dot">
+                        <li></li>
+                        <li></li>
+                        <li style="background-color: rgba(255, 255, 255, 1);"></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="tab_rest safe_b">
+                    <p>클린 웹</p>
+                </div>
+            </li>
+            <li class="tab-link" data-tab="4">
+                <div class="tab_main my_a">
+                    <div>
+                        <h4>마이 액티비티</h4>
+                        <p>북마크, 비밀번호 등 사용자 데이터를 서버에 안전하게 보관하고 다른 기기와 동기화합니다.</p>
+                        <p><a href="#" class="add">자세히보기</a></p>
+                    </div>
+                    <ul class="dot">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li style="background-color: rgba(255, 255, 255, 1);"></li>
+                    </ul>
+                </div>
+                <div class="tab_rest safe_b">
+                    <p>마이 액티비티</p>
+                </div>
+            </li>
+        </ul>
+        <div id="1" class="tab-content current">
+            <img src="images/img_safe_browsing.png">
+        </div>
+        <div id="2" class="tab-content">
+            <img src="images/img_malware_blocking.png">
+        </div>
+        <div id="3" class="tab-content">
+            <img src="images/img_clean_web.png">
+        </div>
+        <div id="4" class="tab-content">
+            <img src="images/img_my_activity.png">
+        </div>
+        </div>
+    </div>
+</body>
+</html>
